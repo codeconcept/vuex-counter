@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   methods: {
     increment() {
@@ -19,9 +21,7 @@ export default {
     }
   },
   computed: {
-    currentValue() {
-      return this.$store.state.currentValue;
-    }
+    ...mapState(["currentValue"])
   }
 };
 </script>
