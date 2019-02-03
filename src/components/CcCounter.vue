@@ -10,17 +10,17 @@
 
 <script>
 export default {
-  data() {
-    return {
-      currentValue: 0
-    };
-  },
   methods: {
     increment() {
-      this.currentValue = this.currentValue + 1;
+      this.$store.dispatch("increment");
     },
     decrement() {
-      this.currentValue = this.currentValue - 1;
+      this.$store.dispatch("decrement");
+    }
+  },
+  computed: {
+    currentValue() {
+      return this.$store.state.currentValue;
     }
   }
 };
