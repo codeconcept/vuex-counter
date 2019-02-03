@@ -8,19 +8,19 @@ export default new Vuex.Store({
     currentValue: 10
   },
   mutations: {
-    INCREMENT_COUNTER(state) {
-      state.currentValue += 1;
+    INCREMENT_COUNTER(state, step) {
+      state.currentValue += step;
     },
-    DECREMENT_COUNTER(state) {
-      state.currentValue -= 1;
+    DECREMENT_COUNTER(state, step) {
+      state.currentValue -= step;
     }
   },
   actions: {
-    increment({ commit }) {
-      commit("INCREMENT_COUNTER");
+    increment({ commit }, step) {
+      commit("INCREMENT_COUNTER", step);
     },
-    decrement({ commit }) {
-      commit("DECREMENT_COUNTER");
+    decrement({ commit }, step) {
+      commit("DECREMENT_COUNTER", step);
     }
   }
 });

@@ -3,7 +3,6 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <HelloWorld msg="Welcome to the Counter App" />
     <CcCounter />
-    <CcCounter />
   </div>
 </template>
 
